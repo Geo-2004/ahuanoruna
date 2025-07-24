@@ -1,0 +1,50 @@
+.formulario-reserva {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.formulario-reserva h2 {
+    text-align: center;
+    color: #2d6a4f;
+    margin-bottom: 20px;
+}
+
+.formulario-reserva p {
+    margin: 8px 0;
+    color: #333;
+}
+
+.formulario-reserva label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+.formulario-reserva input[type="text"],
+.formulario-reserva input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.formulario-reserva button {
+    margin-top: 20px;
+    background-color: #2d6a4f;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.formulario-reserva button:hover {
+    background-color: #1b4332;
+}

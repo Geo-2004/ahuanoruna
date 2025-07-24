@@ -1,0 +1,69 @@
+.factura-container {
+  max-width: 700px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.factura-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+}
+
+.factura-info {
+  text-align: right;
+}
+
+.datos-cliente {
+  margin: 20px 0;
+}
+
+.tabla-detalles {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.tabla-detalles th, .tabla-detalles td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-detalles th {
+  background-color: #f0f0f0;
+}
+
+.total-factura {
+  text-align: right;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.factura-acciones {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-imprimir {
+  display: inline-block;
+  background-color: #007b5e;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn-imprimir:hover {
+  background-color: #005c46;
+}

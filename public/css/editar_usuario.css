@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d8f3dc; /* 🌿 verde claro de fondo general */
+    background-image: url('../img/tu-fondo.jpg'); /* si usas imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formulario-editar {
+    max-width: 520px;
+    margin: 80px auto;
+    padding: 35px 40px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid #b7e4c7;
+}
+
+.formulario-editar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d6a4f; /* verde selva */
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #344e41;
+}
+
+form input,
+form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f9fff8;
+    color: #2b2b2b;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #40916c;
+    box-shadow: 0 0 5px rgba(64, 145, 108, 0.6);
+}
+
+/* Botón personalizado estilo dorado */
+button[type="submit"] {
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #dda15e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #bc6c25;
+    box-shadow: 0 0 10px rgba(188, 108, 37, 0.4);
+}

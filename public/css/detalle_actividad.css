@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Ahora el contenedor ocupa TODA la pantalla */
+.detalle-actividad {
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+    padding: 40px 20px;
+    color: #fff;
+}
+
+/* Título */
+.detalle-actividad h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Imagen: no se agranda con el contenedor, tamaño controlado */
+.imagen {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.imagen img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Contenido fluido */
+.contenido {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #f1f1f1;
+}
+
+/* Listas */
+.detalles,
+.incluye {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.detalles li,
+.incluye li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.detalles li::before,
+.incluye li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #00e676;
+    font-size: 1.2em;
+}
+
+/* Descripción larga */
+.descripcion-larga {
+    border-left: 4px solid #00e676;
+    padding-left: 10px;
+    margin-top: 20px;
+    color: #eee;
+}
+
+/* Botones */
+.acciones {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    background-color: #00e676;
+    color: #000;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #1de9b6;
+}
+
+.boton.secundario {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.boton.secundario:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .acciones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+}

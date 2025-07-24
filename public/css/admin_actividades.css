@@ -1,0 +1,173 @@
+
+.contenido-principal {
+    padding: 40px 30px;
+    width: calc(100% - 300px); /* Sidebar + margen */
+    max-width: 1400px;
+    margin-left: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tabla thead {
+    background-color: #1b5e44; /* Verde oscuro */
+    color: white;
+}
+
+.tabla th, .tabla td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.tabla td img.img-miniatura {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn-editar, .btn-eliminar {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 2px 4px;
+}
+
+.btn-editar {
+    background-color: #007bff;
+}
+
+.btn-editar:hover {
+    background-color: #0056b3;
+}
+
+.btn-eliminar {
+    background-color: #e53935;
+}
+
+.btn-eliminar:hover {
+    background-color: #c62828;
+}
+
+.no-actividades {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 30px;
+    color: #666;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tabla th, .tabla td {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+    .tabla td img.img-miniatura {
+        width: 60px;
+    }
+    .btn-editar, .btn-eliminar {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+}
+/* Contenedor principal del formulario */
+.formulario-actividad {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1b5e44; /* Verde oscuro */
+}
+
+/* Título del formulario */
+.formulario-actividad h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+/* Estilos para etiquetas */
+.formulario-actividad label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+/* Inputs, textarea y select */
+.formulario-actividad input[type="text"],
+.formulario-actividad input[type="number"],
+.formulario-actividad input[type="file"],
+.formulario-actividad select,
+.formulario-actividad textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.8px solid #1b5e44;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+/* Cambiar borde al hacer focus */
+.formulario-actividad input[type="text"]:focus,
+.formulario-actividad input[type="number"]:focus,
+.formulario-actividad input[type="file"]:focus,
+.formulario-actividad select:focus,
+.formulario-actividad textarea:focus {
+    border-color: #2a7f62; /* Verde más claro */
+    outline: none;
+}
+
+/* Botón enviar */
+.formulario-actividad button[type="submit"] {
+    margin-top: 30px;
+    width: 100%;
+    background-color: #1b5e44;
+    color: white;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-actividad button[type="submit"]:hover {
+    background-color: #2a7f62;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .formulario-actividad {
+        padding: 20px 25px;
+        margin: 20px 10px;
+    }
+}

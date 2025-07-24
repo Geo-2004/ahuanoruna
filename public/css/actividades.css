@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --clr-primary: #1b5e20;
+    --clr-accent: #4caf50;
+    --clr-accent-dark: #388e3c;
+    --clr-danger: #d32f2f;
+    --clr-white: #ffffff;
+    --radius-lg: 1rem;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* ----------- HEADER CLIENTE ----------- */
+.header-cliente {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    background: var(--clr-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-cliente {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+}
+
+.menu-cliente {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.menu-cliente a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--radius-lg);
+    background: var(--clr-accent);
+    color: var(--clr-white);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.menu-cliente a:hover,
+.menu-cliente a.activo {
+    background: var(--clr-accent-dark);
+}
+
+.menu-cliente .cerrar-sesion {
+    background: var(--clr-danger);
+}
+
+/* Responsividad sencilla */
+@media (max-width: 768px) {
+    .menu-cliente {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+}
+
+
+/* CONTENIDO DE ACTIVIDADES */
+.actividades {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.actividades h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1b5e20;
+}
+
+.lista-actividades {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.actividad-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.actividad-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.actividad-nombre {
+    font-size: 1.3rem;
+    color: #2e7d32;
+}
+
+.actividad-descripcion {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.actividad-detalles {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.precio, .duracion {
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+.boton,
+.boton-reservar {
+    margin-top: 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    background-color: #388e3c;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.boton:hover,
+.boton-reservar:hover {
+    background-color: #2e7d32;
+}
+
+/* MENSAJE DE VACÍO */
+.sin-actividades {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* RESPONSIVE: MENÚ Y LOGO EN CELULAR */
+@media (max-width: 768px) {
+    .header-cliente {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .logo-cliente {
+        flex-basis: 100%;
+        font-size: 1.2rem; /* más pequeño en celular */
+        margin-bottom: 0.5rem;
+    }
+
+    .menu-cliente {
+        width: 100%;
+        overflow-x: auto;
+        gap: 0.4rem;
+    }
+
+    .menu-cliente a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+        
+    }
+}

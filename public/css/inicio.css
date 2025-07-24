@@ -1,0 +1,353 @@
+/* inicio.css - Estilo profesional para Ahuanoruna */
+
+body.inicio-body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Fondo suave tipo naturaleza */
+  background-color: #e8f5e9;
+  color: #2e4637;
+  background-image: url('<?= $fondo ?>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.encabezado {
+  background-color: rgba(34, 87, 54, 0.93); /* Verde bosque */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #b7e4c7; /* Verde claro */
+}
+
+.encabezado-banner {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.encabezado-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  display: block;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(34, 87, 54, 0.35); /* Verde bosque translúcido */
+  z-index: 1;
+}
+
+.texto-banner {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.texto-banner h1 {
+  font-size: 2.7rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #b7e4c7; /* Verde claro */
+}
+
+.texto-banner p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #388e3c; /* Verde intenso */
+  margin-bottom: 40px;
+}
+
+.grid-actividades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card-actividad {
+  background: rgba(255, 255, 245, 0.97); /* Beige claro */
+  border-radius: 16px;
+  box-shadow: 0 4px 18px 0 rgba(56, 142, 60, 0.13); /* Verde sombra */
+  padding: 1.3rem 1rem 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card-actividad.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+.card-actividad:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+}
+
+.card-actividad img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.card-actividad h3 {
+  color: #388e3c; /* Verde intenso */
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-actividad p {
+  color: #444;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+.card-actividad i {
+  color: #43a047; /* Verde hoja */
+  margin-right: 5px;
+}
+
+.boton-turistico, .boton {
+  display: inline-block;
+  margin: 0.3rem 0.2rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.boton-turistico {
+  background: linear-gradient(90deg, #388e3c 0%, #43a047 100%); /* Verde hoja */
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.08);
+}
+
+.boton-turistico:hover {
+  background: linear-gradient(90deg, #43a047 0%, #388e3c 100%);
+  color: #fff;
+}
+
+.boton {
+  background: #fff;
+  color: #388e3c;
+  border: 1.5px solid #388e3c;
+}
+
+.boton:hover {
+  background: #388e3c;
+  color: #fff;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer-turistico {
+  background-color: rgba(34, 87, 54, 0.93); /* Verde bosque */
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 50px;
+}
+
+.footer-contenido p {
+  margin: 5px 0;
+}
+
+.footer-redes a {
+  margin: 0 10px;
+  color: #b7e4c7; /* Verde claro */
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* ------------------------ */
+/* ESTILOS RESPONSIVE EXTRA */
+/* ------------------------ */
+@media (max-width: 768px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu a {
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 51, 34, 0.8);
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+  }
+
+  .encabezado-banner {
+    height: 180px;
+  }
+
+  .texto-banner h1 {
+    font-size: 1.3rem;
+  }
+
+  .texto-banner p {
+    font-size: 0.95rem;
+  }
+
+  .card-actividad {
+    padding: 15px;
+  }
+
+  .card-actividad h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-actividad p {
+    font-size: 1rem;
+  }
+
+  .boton, .boton-turistico {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto-banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .texto-banner p {
+    font-size: 1rem;
+  }
+
+  .encabezado-banner {
+    height: 200px;
+  }
+
+  .footer-contenido p, .footer-copy {
+    font-size: 0.9rem;
+  }
+
+  .footer-redes a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .encabezado-banner {
+    height: 180px;
+  }
+
+  .texto-banner h1 {
+    font-size: 1.3rem;
+  }
+
+  .texto-banner p {
+    font-size: 0.95rem;
+  }
+
+  .grid-actividades {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .card-actividad img {
+    height: 110px;
+  }
+}
+
+
